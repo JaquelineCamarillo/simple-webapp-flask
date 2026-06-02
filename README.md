@@ -108,75 +108,57 @@ graph LR
 - RF-09 El sistema deberá restringir el acceso a cada módulo según el rol del usuario autenticado (Cliente, Instructor, Recepcionista, Administrador).
 - RF-10 El sistema deberá registrar cada transacción de pago con fecha, monto, tipo de membresía y usuario responsable.
 
-# Simple Web Application
+# 📸 Evidencias
 
-A minimal [Python Flask](https://flask.palletsprojects.com/) web application used as the demo app in the [KodeKloud Docker for Beginners](https://kodekloud.com/courses/docker-for-the-absolute-beginner-hands-on/) course.
+***Las evidencias se debaran incluir en tu repositorio propio, una vez terminado cargar el URL resultante en Classroom.***
 
-The app exposes two routes:
+## Evidencia 1
 
-| Route | Response |
-|---|---|
-| `/` | `Welcome!` |
-| `/how-are-you` | `I am good, how about you?` |
+Captura del Fork creado.
+![alt text](<Captura de pantalla 2026-06-01 185632.png>)
+---
 
-## Run manually (without Docker)
+## Evidencia 2
 
-These steps assume a fresh machine.
-
-1. Select an OS - Ubuntu
-
-2. Update the package index:
-
-   ```bash
-   sudo apt-get update
-   ```
-
-3. Install Flask (this also pulls in Python 3):
-
-   ```bash
-   sudo apt-get install -y python3-flask
-   ```
-
-4. Set the Flask app environment variable:
-
-   ```bash
-   export FLASK_APP=app.py
-   ```
-
-5. Start the application:
-
-   ```bash
-   flask run --host=0.0.0.0
-   ```
-
-Then open `http://localhost:5000` and `http://localhost:5000/how-are-you` in a browser.
-
-## Run with Docker
+Resultado de:
 
 ```bash
-git clone https://github.com/mmumshad/simple-webapp-flask.git
-cd simple-webapp-flask
-docker build -t simple-webapp-flask .
-docker run -p 5000:5000 simple-webapp-flask
+git remote -v
 ```
+![alt text](<Captura de pantalla 2026-06-01 190727.png>)
 
-Then open `http://localhost:5000` and `http://localhost:5000/how-are-you` in a browser.
+---
 
-## The Dockerfile
+## Evidencia 3
 
-```dockerfile
-FROM ubuntu
+Resultado de:
 
-RUN apt-get update
-RUN apt-get install -y python3-flask
-
-COPY app.py /opt/app.py
-
-ENV FLASK_APP=/opt/app.py
-
-ENTRYPOINT ["flask", "run", "--host=0.0.0.0"]
+```bash
+git branch
 ```
+![alt text](<Captura de pantalla 2026-06-01 190520.png>)
+---
 
-Each instruction mirrors one of the manual steps above — making it easy to see how a Dockerfile is just an automated install script.
+## Evidencia 4
 
+Resultado de:
 
+```bash
+git log --oneline
+```
+![alt text](<Captura de pantalla 2026-06-01 191856.png>)
+---
+
+## Evidencia 5
+
+Captura del Pull Request.
+![alt text](<Captura de pantalla 2026-06-01 192238.png>)
+![alt text](<Captura de pantalla 2026-06-01 192454.png>)
+---
+
+## Evidencia 6
+
+URL del Pull Request.
+https://github.com/JaquelineCamarillo/simple-webapp-flask.git
+
+## Team Members
